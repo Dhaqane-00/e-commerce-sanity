@@ -29,12 +29,18 @@ export function MainNav() {
             <NavigationMenuContent>
               <div className="grid gap-3 p-6 md:w-[400px] lg:w-[500px]">
                 {section.items.map((item) => (
-                  <div key={item.title} className="grid gap-1">
-                    <h3 className="text-sm font-medium">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
+                  <Link 
+                    key={item.title} 
+                    href={item.href || ""} 
+                    className="block hover:bg-muted p-2 rounded-md transition-colors"
+                  >
+                    <div className="grid gap-1">
+                      <h3 className="text-sm font-medium">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground">
+                        {item.description}
+                      </p>
+                    </div>
+                  </Link>
                 ))}
               </div>
             </NavigationMenuContent>
