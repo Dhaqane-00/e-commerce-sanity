@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Phone, ShoppingCart } from 'lucide-react'
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
+import { CartSheet } from "@/components/cart/cart-sheet"
 
 import { Badge } from "@/components/ui/badge"
 
@@ -42,16 +43,7 @@ export function UserNav({ className = "" }: { className?: string }) {
             </button>
           </SignInButton>
         </SignedOut>
-        <Link href="/cart" className="relative hover:text-primary">
-          <span className="sr-only">Cart</span>
-          <ShoppingCart className="h-6 w-6" />
-          <Badge
-            variant="destructive"
-            className="absolute -right-2 -top-2 h-5 w-5 rounded-full p-0 text-xs"
-          >
-            0
-          </Badge>
-        </Link>
+        <CartSheet />
       </div>
     </div>
   )

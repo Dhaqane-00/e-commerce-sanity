@@ -7,7 +7,7 @@ import { MobileMenu } from "@/components/header/mobile-menu"
 
 export function SiteHeader() {
   return (
-    <header className="w-full border-b px-2 sm:px-4">
+    <header className="w-full border-b px-10 sm:px-4">
       {/* TopBar hidden on mobile */}
       <div className="hidden sm:block">
         <TopBar />
