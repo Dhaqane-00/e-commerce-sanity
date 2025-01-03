@@ -27,14 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        
-        <ClerkProvider>
-          <SiteHeader />
+      <ClerkProvider>
+        <body>
           <Toaster />
           {children}
-        </ClerkProvider>
-      </body>
+        </body>
+      </ClerkProvider>
     </html>
   );
 }
