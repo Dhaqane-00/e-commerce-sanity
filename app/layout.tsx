@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { SiteHeader } from "@/components/header/site-header";
 import { Toaster } from "@/components/ui/toaster"
+import { SanityLive } from "@/sanity/lib/live";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
         <body>
           <Toaster />
           {children}
+          <SanityLive />
         </body>
       </ClerkProvider>
     </html>
